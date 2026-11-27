@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="6yuYdnF5K9EI5yktnem1nXpBC6NilDNxeR0hxlzxUZQ" />
+    <title>Saini Traders | Domestic Wires, Cables, Switches & Pipe Fittings in Kotla Mubarakpur</title>
+    <style>
+        /* Light & Dark Theme Setup */
+        :root { --bg-color: #f8f9fa; --text-color: #333; --card-bg: #ffffff; }
+        [data-theme="dark"] { --bg-color: #121212; --text-color: #e0e0e0; --card-bg: #1e1e1e; }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; transition: 0.3s; }
+        
+        header { background: #1a1a1a; color: #fff; padding: 1.5rem 10%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #f39c12; }
+        .theme-btn { background: #f39c12; border: none; color: white; padding: 0.4rem 0.8rem; border-radius: 20px; cursor: pointer; font-weight: bold; }
+        
+        .hero { background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&w=1200&q=80') center/cover; color: #fff; text-align: center; padding: 5rem 1rem; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 1.5rem; color: #ddd; }
+        
+        .cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+        .btn { padding: 0.8rem 1.8rem; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; transition: 0.3s; }
+        .btn-call { background: #28a745; color: white; }
+        .btn-whatsapp { background: #25D366; color: white; }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        .trust-banner { background: var(--card-bg); padding: 2rem 10%; display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; border-bottom: 1px solid #eee; }
+        .stat-item h3 { font-size: 1.8rem; color: #f39c12; }
+        
+        .services { padding: 4rem 10%; text-align: center; }
+        .services h2 { margin-bottom: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .card { background: var(--card-bg); color: var(--text-color); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .card h3 { color: #f39c12; margin-bottom: 0.5rem; }
+
+        /* Gallery Styling */
+        .gallery { padding: 4rem 10%; background: var(--bg-color); text-align: center; }
+        .gallery h2 { margin-bottom: 2rem; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+        .gallery-item { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background: var(--card-bg); }
+        .gallery-item img { width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.3s; }
+        .gallery-item img:hover { transform: scale(1.05); }
+        .gallery-item p { padding: 0.8rem; font-weight: bold; font-size: 0.95rem; color: var(--text-color); }
+
+        /* Inquiry Form Styling */
+        .inquiry-section { padding: 4rem 10%; background: var(--bg-color); text-align: center; }
+        .inquiry-form { max-width: 500px; margin: 1.5rem auto 0; background: var(--card-bg); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: left; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 0.4rem; color: var(--text-color); }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; background: var(--card-bg); color: var(--text-color); }
+        .btn-submit { width: 100%; background: #f39c12; color: white; border: none; padding: 0.9rem; border-radius: 5px; font-weight: bold; font-size: 1rem; cursor: pointer; transition: 0.3s; }
+        .btn-submit:hover { background: #d35400; }
+
+        /* Interactive FAQ Accordion */
+        .faq-section { padding: 3rem 10%; max-width: 800px; margin: 0 auto; }
+        .faq-item { margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); overflow: hidden; background: var(--card-bg); }
+        .faq-question { width: 100%; text-align: left; padding: 1rem; background: none; border: none; font-size: 1.1rem; font-weight: bold; cursor: pointer; color: var(--text-color); display: flex; justify-content: space-between; align-items: center; }
+        .faq-answer { display: none; padding: 0 1rem 1rem 1rem; font-size: 0.95rem; color: var(--text-color); opacity: 0.8; }
+        .faq-item.active .faq-answer { display: block; }
+
+        .location-info { background: var(--card-bg); padding: 3rem 10%; text-align: center; }
+        
+        /* Mobile Bottom Sticky Bar */
+        .mobile-sticky-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #fff; padding: 0.8rem; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); justify-content: space-around; z-index: 1000; }
+        @media (max-width: 768px) { .mobile-sticky-bar { display: flex; } }
+
+        footer { background: #1a1a1a; color: #888; text-align: center; padding: 1.5rem; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Saini Traders</div>
+        <button class="theme-btn" onclick="toggleTheme()">🌙 Night Mode</button>
+    </header>
+
+    <section class="hero">
+        <h1>Wholesale Electrical & Hardware Supplies</h1>
+        <p>Leading Dealers in Domestic Wires, Heavy Cables, Modular Switches, PVC Conduit Pipes & All Electrical Fittings in Kotla Mubarakpur, Delhi</p>
+        <div class="cta-buttons">
+            <a href="tel:+919891222600" class="btn btn-call">📞 Call Now for Best Deal</a>
+            <a href="https://wa.me/919891222600?text=Hi,%20I%20am%20interested%20in%20your%20electrical%20supplies" class="btn btn-whatsapp">💬 Chat on WhatsApp</a>
+        </div>
+    </section>
+
+    <section class="trust-banner">
+        <div class="stat-item">
+            <h3>46+</h3>
+            <p>Years in Business</p>
+        </div>
+        <div class="stat-item">
+            <h3>4.1 ★</h3>
+            <p>Rated by Customers</p>
+        </div>
+        <div class="stat-item">
+            <h3>100%</h3>
+            <p>Genuine Products</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Our Key Product Range</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Domestic Wires & Cables</h3>
+                <p>High-grade insulated copper domestic house wires, multi-core industrial cables, and flexible cords at wholesale rates.</p>
+            </div>
+            <div class="card">
+                <h3>Switches & Socket Boards</h3>
+                <p>Durable modular switches, socket plates, switchboards, MCBs, isolators, and distribution boxes for residential & commercial builds.</p>
+            </div>
+            <div class="card">
+                <h3>Pipes & Electrical Fittings</h3>
+                <p>Heavy-duty PVC conduit pipes, bend fittings, junction boxes, casing-capping, and full electrical setup hardware.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2>Featured Product Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&w=600&q=80" alt="Domestic Wires and Cables">
+                <p>Domestic Wires & Heavy Cables</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="Modular Switches and Sockets">
+                <p>Modular Switches & Boards</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="PVC Conduit Pipes and Fittings">
+                <p>PVC Conduit Pipes & Fittings</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="MCBs and Electrical Circuit Fittings">
+                <p>MCBs & All Electrical Fittings</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="inquiry-section">
+        <section class="inquiry-section">
+    <h2>Request a Price Quote on WhatsApp</h2>
+    <p>Select your requirements below to get an instant estimate on WhatsApp from Saini Traders.</p>
+    
+    <div class="inquiry-form">
+        <div class="form-group">
+            <label for="wa-category">Select Product Required:</label>
+            <select id="wa-category">
+                <option value="Domestic House Wires & Cables">Domestic Wires & Cables</option>
+                <option value="Modular Switches & Switchboards">Modular Switches & Boards</option>
+                <option value="PVC Conduit Pipes & Fittings">PVC Conduit Pipes & Fittings</option>
+                <option value="MCBs & Distribution Boxes">MCBs & Electrical Fittings</option>
+                <option value="Complete House / Site Electrical Package">Full House Electrical Package</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="wa-quantity">Quantity / Requirement Details:</label>
+            <textarea id="wa-quantity" rows="3" placeholder="e.g., 5 wire rolls (1.5 sq mm), 20 modular switches, 50 PVC pipes..."></textarea>
+        </div>
+
+        <button onclick="sendWhatsAppQuote()" class="btn-submit" style="background-color: #25D366; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+            💬 Get Quote on WhatsApp
+        </button>
+    </div>
+</section>
+        
+    </section>
+
+    <section class="faq-section">
+        <h2 style="text-align: center; margin-bottom: 1.5rem;">Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <button class="faq-question">Do you offer wholesale pricing for contractors? <span>+</span></button>
+            <div class="faq-answer">Yes, we provide special bulk rates for electricians, builders, contractors, and large construction projects.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Do you stock certified ISI-marked wires and cables? <span>+</span></button>
+            <div class="faq-answer">Yes, all our domestic wires, cables, MCBs, and PVC conduit pipes comply with standard electrical safety certifications.</div>
+        </div>
+    </section>
+
+    <section class="location-info">
+        <h2>Visit Our Store</h2>
+        <p><strong>Address:</strong> Near Gurudwara Road, Kotla Mubarakpur, Delhi - 110003</p>
+        <p><strong>Store Hours:</strong> Open Today until 8:00 PM</p>
+        <br>
+        <a href="http://googleusercontent.com/maps.google.com/3" 
+           target="_blank" 
+           class="btn" 
+           style="background-color: #4285F4; color: white;">
+           📍 Get Directions on Google Maps
+        </a>
+    </section>
+
+    <div class="mobile-sticky-bar">
+        <a href="tel:+919876543210" class="btn btn-call" style="padding: 0.5rem 1rem; font-size: 0.9rem;">📞 Call Now</a>
+        <a href="https://wa.me/919876543210" class="btn btn-whatsapp" style="padding: 0.5rem 1rem; font-size: 0.9rem;">💬 WhatsApp</a>
+    </div>
+
+    <footer>
+        <p>© 2026 Saini Traders. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Theme Switcher Logic
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const btn = document.querySelector('.theme-btn');
+            
+            if (currentTheme === 'dark') {
+                body.removeAttribute('data-theme');
+                btn.innerHTML = '🌙 Night Mode';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                btn.innerHTML = '☀️ Day Mode';
+            }
+        }
+
+        // FAQ Accordion Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('active');
+                const icon = button.querySelector('span');
+                icon.textContent = faqItem.classList.contains('active') ? '−' : '+';
+            });
+        });
+        <script>
+    function sendWhatsAppQuote() {
+        // Replace with your actual 10-digit shop WhatsApp phone number
+        const phoneNumber = "919876543210"; 
+        
+        const category = document.getElementById('wa-category').value;
+        const details = document.getElementById('wa-quantity').value;
+
+        let message = `Hi Saini Traders, I am looking for a price quote:%0A%0A`;
+        message += `*Product Category:* ${encodeURIComponent(category)}%0A`;
+        if (details.trim() !== "") {
+            message += `*Details/Quantity:* ${encodeURIComponent(details)}%0A`;
+        }
+        message += `%0APlease share your best rates.`;
+
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+        window.open(whatsappURL, '_blank');
+    }
+
+    </script>
+
+</body>
+</html>
